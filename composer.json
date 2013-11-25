@@ -3,7 +3,7 @@
     "description": "Shipping module",
     "keywords": ["shop", "shipping", "silverstripe"],
     "type": "silverstripe-module",
-    "target-dir": "silverstripe-shop-shippingframework",
+    "target-dir": "shop_shippingframework",
     "homepage": "https://github.com/tylerkidd/silverstripe-shop-shippingframework/",
     "license": "BSD-3-Clause",
     "authors": [{
