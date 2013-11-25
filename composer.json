@@ -1,0 +1,12 @@
+{
+    "name": "tylerkidd/silverstripe-shop-shippingframework",
+    "authors": [
+        {
+            "name": "Tyler Kidd",
+            "email": "tyler@adaircreative.com"
+        }
+    ],
+    "require": {
+
+    }
+}
