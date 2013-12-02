@@ -6,6 +6,7 @@ class ShippingMethodAdmin extends ModelAdmin{
 	static $menu_priority = 2;
 
 	static $managed_models = array(
+		'APIBasedShippingMethod',
 		'ZonedShippingMethod',
 		'TableShippingMethod'
 	);
