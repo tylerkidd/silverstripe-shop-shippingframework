@@ -5,37 +5,40 @@
  * @package shop
  * @subpackage shipping 
  */
-class ShippingMethod extends DataObject{
-	
-	static $db = array(
-		"Name" => "Varchar",
-		"Description" => "Varchar",
-		"Enabled" => "Boolean",
-		
-		//TODO
-		//"WeightMin" => "Decimal",
-		//"WeightMax" => "Decimal",
-		//"HandlingFee" => "Currency", //adds extra handling cost to use this method
-	);
-	
-	static $casting = array(
-		'Rate' => 'Currency'
-	);
-	
-	function calculateRate(ShippingPackage $package, Address $address){
-		return null;
-	}
-	
-	function getRate(){
-		return $this->CalculatedRate;
-	}
-	
-	function Title(){
-		return implode(" - ",array_filter(array(
-			$this->CalculatedRate,
-			$this->Name,
-			$this->Description
-		)));
-	}
-	
+class ShippingMethod extends DataObject
+{
+    
+    public static $db = array(
+        "Name" => "Varchar",
+        "Description" => "Varchar",
+        "Enabled" => "Boolean",
+        
+        //TODO
+        //"WeightMin" => "Decimal",
+        //"WeightMax" => "Decimal",
+        //"HandlingFee" => "Currency", //adds extra handling cost to use this method
+    );
+    
+    public static $casting = array(
+        'Rate' => 'Currency'
+    );
+    
+    public function calculateRate(ShippingPackage $package, Address $address)
+    {
+        return null;
+    }
+    
+    public function getRate()
+    {
+        return $this->CalculatedRate;
+    }
+    
+    public function Title()
+    {
+        return implode(" - ", array_filter(array(
+            $this->CalculatedRate,
+            $this->Name,
+            $this->Description
+        )));
+    }
 }
